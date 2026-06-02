@@ -3,6 +3,8 @@ import * as Haptics from "expo-haptics";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import React from "react";
 import {
+  Image,
+  ImageSourcePropType,
   ScrollView,
   StyleSheet,
   Text,
@@ -21,8 +23,7 @@ type IconName = React.ComponentProps<typeof Ionicons>["name"];
 interface BodyContent {
   badge: string;
   headline: string;
-  illustIcon: IconName;
-  illustIcon2?: IconName;
+  illustImage: ImageSourcePropType;
   focus: Array<{ icon: IconName; text: string; subtitle?: string }>;
   thinkAbout: Array<{ icon: IconName; title: string; subtitle: string }>;
   progress: number;
@@ -32,7 +33,7 @@ const BODY_CONTENT: Record<number, BodyContent> = {
   1: {
     badge: "Body Paragraph 1",
     headline: "Introduce your point.",
-    illustIcon: "thunderstorm",
+    illustImage: require("../../assets/images/storm.png"),
     focus: [
       {
         icon: "shield-checkmark-outline",
@@ -54,8 +55,7 @@ const BODY_CONTENT: Record<number, BodyContent> = {
   2: {
     badge: "Body Paragraph 2",
     headline: "Explain why\nit matters.",
-    illustIcon: "globe",
-    illustIcon2: "people",
+    illustImage: require("../../assets/images/community.png"),
     focus: [
       {
         icon: "globe-outline",
@@ -77,7 +77,7 @@ const BODY_CONTENT: Record<number, BodyContent> = {
   3: {
     badge: "Body Paragraph 3",
     headline: "Provide an example.",
-    illustIcon: "snow-outline",
+    illustImage: require("../../assets/images/polar-bear.png"),
     focus: [
       {
         icon: "paw-outline",
@@ -99,8 +99,7 @@ const BODY_CONTENT: Record<number, BodyContent> = {
   4: {
     badge: "Body Paragraph 4",
     headline: "Suggest a solution.",
-    illustIcon: "leaf",
-    illustIcon2: "bulb-outline",
+    illustImage: require("../../assets/images/windmill.png"),
     focus: [
       {
         icon: "leaf-outline",
@@ -167,12 +166,7 @@ export default function BodyScreen() {
         <View style={styles.heroRow}>
           <Text style={[styles.headline, { color: colors.text }]}>{content.headline}</Text>
           <View style={[styles.illustration, { backgroundColor: colors.card }]}>
-            <Ionicons name={content.illustIcon} size={38} color={colors.primary} style={{ opacity: 0.8 }} />
-            {content.illustIcon2 && (
-              <View style={[styles.illustBadge, { backgroundColor: colors.accentLight }]}>
-                <Ionicons name={content.illustIcon2} size={14} color={colors.accent} />
-              </View>
-            )}
+            <Image source={content.illustImage} style={styles.illustImage} resizeMode="cover" />
           </View>
         </View>
 
@@ -257,21 +251,16 @@ const styles = StyleSheet.create({
     lineHeight: 32,
   },
   illustration: {
-    width: 88,
-    height: 88,
+    width: 100,
+    height: 100,
     borderRadius: 20,
+    overflow: "hidden",
     alignItems: "center",
     justifyContent: "center",
   },
-  illustBadge: {
-    position: "absolute",
-    top: 8,
-    right: 8,
-    width: 26,
-    height: 26,
-    borderRadius: 13,
-    alignItems: "center",
-    justifyContent: "center",
+  illustImage: {
+    width: "100%",
+    height: "100%",
   },
   sectionLabel: { fontSize: 14, fontFamily: "Inter_500Medium" },
   focusCard: {
