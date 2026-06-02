@@ -41,7 +41,7 @@ export default function OnboardingScreen() {
               style={styles.logoIcon}
               resizeMode="contain"
             />
-            <Text style={[styles.logoText, { color: colors.text, fontFamily: "Nunito_800ExtraBold" }]}>
+            <Text style={[styles.logoText, { color: colors.text, fontFamily: "Nunito_400Regular" }]}>
               <Text style={{ color: colors.text }}>Un</Text>
               <Text style={{ color: colors.accent }}>K</Text>
               <Text style={{ color: colors.text }}>not</Text>

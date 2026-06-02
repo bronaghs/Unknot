@@ -5,8 +5,9 @@ import {
   Inter_700Bold,
 } from "@expo-google-fonts/inter";
 import {
+  Nunito_400Regular,
+  Nunito_600SemiBold,
   Nunito_700Bold,
-  Nunito_800ExtraBold,
 } from "@expo-google-fonts/nunito";
 import { useFonts } from "expo-font";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
@@ -45,8 +46,9 @@ export default function RootLayout() {
     Inter_500Medium,
     Inter_600SemiBold,
     Inter_700Bold,
+    Nunito_400Regular,
+    Nunito_600SemiBold,
     Nunito_700Bold,
-    Nunito_800ExtraBold,
   });
 
   useEffect(() => {
