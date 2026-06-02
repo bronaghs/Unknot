@@ -52,7 +52,7 @@ export default function OnboardingScreen() {
           </View>
 
           <View style={styles.headlineArea}>
-            <Text style={[styles.headline, { color: colors.text, fontFamily: "Inter_700Bold" }]}>
+            <Text style={[styles.headline, { color: colors.text, fontFamily: "Inter_500Medium" }]}>
               Clarity in every step.{"\n"}Confidence in every assignment.
             </Text>
             <Text style={[styles.subtext, { color: colors.mutedForeground, fontFamily: "Inter_400Regular" }]}>
