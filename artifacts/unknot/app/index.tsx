@@ -72,7 +72,7 @@ export default function OnboardingScreen() {
           </Animated.View>
 
           <Animated.View style={[styles.headlineArea, makeStyle(headlineAnim)]}>
-            <Text style={[styles.headline, { color: colors.text, fontFamily: "Inter_400Regular" }]}>
+            <Text style={[styles.headline, { color: colors.text, fontFamily: "Inter_600SemiBold" }]}>
               Clarity in every step.{"\n"}Confidence in every assignment.
             </Text>
             <Text style={[styles.subtext, { color: colors.mutedForeground, fontFamily: "Inter_400Regular" }]}>
@@ -154,10 +154,10 @@ const styles = StyleSheet.create({
     marginBottom: 24,
   },
   headline: {
-    fontSize: 20,
+    fontSize: 22,
     textAlign: "center",
-    lineHeight: 28,
-    letterSpacing: -0.2,
+    lineHeight: 30,
+    letterSpacing: -0.3,
     marginBottom: 12,
   },
   subtext: {
