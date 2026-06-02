@@ -32,15 +32,25 @@ export default function UploadScreen() {
       router.push("/analyzing");
       return;
     }
-    const { status } = await ImagePicker.requestCameraPermissionsAsync();
-    if (status !== "granted") {
-      const galleryResult = await ImagePicker.launchImageLibraryAsync({
-        mediaTypes: "images",
-        quality: 0.8,
-        base64: false,
-      });
-      if (!galleryResult.canceled && galleryResult.assets[0]) {
-        setImageUri(galleryResult.assets[0].uri);
+    let cameraGranted = false;
+    try {
+      const { status } = await ImagePicker.requestCameraPermissionsAsync();
+      cameraGranted = status === "granted";
+    } catch {
+      cameraGranted = false;
+    }
+    if (!cameraGranted) {
+      try {
+        const galleryResult = await ImagePicker.launchImageLibraryAsync({
+          mediaTypes: "images",
+          quality: 0.8,
+          base64: false,
+        });
+        if (!galleryResult.canceled && galleryResult.assets[0]) {
+          setImageUri(galleryResult.assets[0].uri);
+          router.push("/analyzing");
+        }
+      } catch {
         router.push("/analyzing");
       }
       return;
@@ -56,6 +66,8 @@ export default function UploadScreen() {
         setImageUri(result.assets[0].uri);
         router.push("/analyzing");
       }
+    } catch {
+      router.push("/analyzing");
     } finally {
       setLoading(false);
     }
