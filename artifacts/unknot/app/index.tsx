@@ -41,10 +41,10 @@ export default function OnboardingScreen() {
               style={styles.logoIcon}
               resizeMode="contain"
             />
-            <Text style={[styles.logoText, { color: colors.text, fontFamily: "Inter_700Bold" }]}>
-              <Text style={{ color: colors.primary }}>Un</Text>
-              <Text style={{ color: colors.text }}>K</Text>
-              <Text style={{ color: colors.primary }}>not</Text>
+            <Text style={[styles.logoText, { color: colors.text, fontFamily: "Nunito_800ExtraBold" }]}>
+              <Text style={{ color: colors.text }}>Un</Text>
+              <Text style={{ color: colors.accent }}>K</Text>
+              <Text style={{ color: colors.text }}>not</Text>
             </Text>
             <Text style={[styles.logoTagline, { color: colors.mutedForeground, fontFamily: "Inter_600SemiBold" }]}>
               LET'S UNKNOT THIS
@@ -115,8 +115,8 @@ const styles = StyleSheet.create({
     marginBottom: 24,
   },
   logoIcon: {
-    width: 64,
-    height: 64,
+    width: 160,
+    height: 73,
     marginBottom: 8,
   },
   logoText: {
