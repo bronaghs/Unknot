@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
   title: {
     flex: 1,
     fontSize: 18,
-    fontFamily: "Inter_700Bold",
+    fontFamily: "Inter_500Medium",
   },
   progressLabel: {
     fontSize: 13,

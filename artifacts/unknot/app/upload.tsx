@@ -188,7 +188,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  title: { fontSize: 22, fontFamily: "Inter_700Bold" },
+  title: { fontSize: 22, fontFamily: "Inter_500Medium" },
   subtitle: { fontSize: 14, fontFamily: "Inter_400Regular", lineHeight: 20 },
   uploadCard: {
     borderRadius: 20,
@@ -217,7 +217,7 @@ const styles = StyleSheet.create({
   },
   docLines: { gap: 4, alignItems: "center" },
   line: { height: 3, borderRadius: 2 },
-  photoInstr: { fontSize: 15, fontFamily: "Inter_600SemiBold", textAlign: "center" },
+  photoInstr: { fontSize: 15, fontFamily: "Inter_500Medium", textAlign: "center" },
   photoSubInstr: { fontSize: 13, fontFamily: "Inter_400Regular", textAlign: "center" },
   photoBtn: {
     flexDirection: "row",
@@ -228,7 +228,7 @@ const styles = StyleSheet.create({
     borderRadius: 16,
     marginTop: 4,
   },
-  photoBtnText: { fontSize: 16, fontFamily: "Inter_600SemiBold" },
+  photoBtnText: { fontSize: 16, fontFamily: "Inter_500Medium" },
   galleryLink: { paddingVertical: 4 },
   galleryLinkText: { fontSize: 13, fontFamily: "Inter_400Regular", textDecorationLine: "underline" },
   securityNote: { flexDirection: "row", alignItems: "center", gap: 6, paddingTop: 4 },
@@ -249,6 +249,6 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   whyText: { flex: 1, gap: 3 },
-  whyTitle: { fontSize: 14, fontFamily: "Inter_700Bold" },
+  whyTitle: { fontSize: 14, fontFamily: "Inter_500Medium" },
   whyDesc: { fontSize: 13, fontFamily: "Inter_400Regular", lineHeight: 18 },
 });

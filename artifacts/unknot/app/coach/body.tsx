@@ -244,7 +244,7 @@ const styles = StyleSheet.create({
     paddingVertical: 6,
     borderRadius: 10,
   },
-  badgeText: { fontSize: 13, fontFamily: "Inter_600SemiBold" },
+  badgeText: { fontSize: 13, fontFamily: "Inter_500Medium" },
   heroRow: {
     flexDirection: "row",
     alignItems: "flex-start",
@@ -253,7 +253,7 @@ const styles = StyleSheet.create({
   headline: {
     flex: 1,
     fontSize: 24,
-    fontFamily: "Inter_700Bold",
+    fontFamily: "Inter_500Medium",
     lineHeight: 32,
   },
   illustration: {
@@ -273,7 +273,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  sectionLabel: { fontSize: 14, fontFamily: "Inter_600SemiBold" },
+  sectionLabel: { fontSize: 14, fontFamily: "Inter_500Medium" },
   focusCard: {
     borderRadius: 18,
     borderWidth: 1,
@@ -293,7 +293,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   focusText: { flex: 1, gap: 3 },
-  focusTitle: { fontSize: 14, fontFamily: "Inter_600SemiBold", lineHeight: 20 },
+  focusTitle: { fontSize: 14, fontFamily: "Inter_500Medium", lineHeight: 20 },
   focusSub: { fontSize: 12, fontFamily: "Inter_400Regular", lineHeight: 18 },
   thinkCard: {
     borderRadius: 18,
@@ -314,6 +314,6 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   thinkText: { flex: 1, gap: 3 },
-  thinkTitle: { fontSize: 14, fontFamily: "Inter_600SemiBold" },
+  thinkTitle: { fontSize: 14, fontFamily: "Inter_500Medium" },
   thinkSub: { fontSize: 12, fontFamily: "Inter_400Regular", lineHeight: 18 },
 });

@@ -54,9 +54,9 @@ export function AppHeader({ showBack = true, onBack }: AppHeaderProps) {
         <Text
           style={[styles.logoText, { color: colors.text }]}
         >
-          <Text style={{ color: colors.primary }}>Un</Text>
-          <Text style={{ color: colors.text }}>K</Text>
-          <Text style={{ color: colors.primary }}>not</Text>
+          <Text style={{ color: colors.text }}>Un</Text>
+          <Text style={{ color: colors.accent }}>K</Text>
+          <Text style={{ color: colors.text }}>not</Text>
         </Text>
       </View>
 
@@ -91,12 +91,12 @@ const styles = StyleSheet.create({
     gap: 6,
   },
   logoIcon: {
-    width: 26,
-    height: 26,
+    width: 46,
+    height: 21,
   },
   logoText: {
     fontSize: 20,
-    fontFamily: "Inter_700Bold",
+    fontFamily: "Nunito_400Regular",
     letterSpacing: -0.3,
   },
 });

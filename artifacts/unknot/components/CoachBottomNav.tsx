@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
   },
   backText: {
     fontSize: 15,
-    fontFamily: "Inter_600SemiBold",
+    fontFamily: "Inter_500Medium",
   },
   nextBtn: {
     flex: 1,
@@ -82,7 +82,7 @@ const styles = StyleSheet.create({
   },
   nextText: {
     fontSize: 14,
-    fontFamily: "Inter_600SemiBold",
+    fontFamily: "Inter_500Medium",
     textAlign: "center",
     flexShrink: 1,
   },

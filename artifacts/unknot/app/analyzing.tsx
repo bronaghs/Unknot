@@ -181,7 +181,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  title: { fontSize: 18, fontFamily: "Inter_700Bold" },
+  title: { fontSize: 18, fontFamily: "Inter_500Medium" },
   progressTrack: {
     height: 4,
     marginHorizontal: 20,
@@ -216,7 +216,7 @@ const styles = StyleSheet.create({
   },
   headline: {
     fontSize: 20,
-    fontFamily: "Inter_700Bold",
+    fontFamily: "Inter_500Medium",
     textAlign: "center",
     paddingHorizontal: 24,
     marginBottom: 8,
@@ -251,7 +251,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   stepText: { flex: 1 },
-  stepTitle: { fontSize: 14, fontFamily: "Inter_600SemiBold", marginBottom: 2 },
+  stepTitle: { fontSize: 14, fontFamily: "Inter_500Medium", marginBottom: 2 },
   stepSub: { fontSize: 12, fontFamily: "Inter_400Regular" },
   stepStatus: { width: 28, alignItems: "center" },
   checkCircle: {

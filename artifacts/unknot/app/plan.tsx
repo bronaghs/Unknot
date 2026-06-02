@@ -146,7 +146,7 @@ const styles = StyleSheet.create({
     marginTop: 2,
   },
   titleText: { flex: 1, gap: 4 },
-  title: { fontSize: 22, fontFamily: "Inter_700Bold" },
+  title: { fontSize: 22, fontFamily: "Inter_500Medium" },
   subtitle: { fontSize: 14, fontFamily: "Inter_400Regular", lineHeight: 20 },
   planCard: {
     borderRadius: 20,
@@ -154,7 +154,7 @@ const styles = StyleSheet.create({
     padding: 20,
     gap: 0,
   },
-  planLabel: { fontSize: 14, fontFamily: "Inter_600SemiBold", marginBottom: 16 },
+  planLabel: { fontSize: 14, fontFamily: "Inter_500Medium", marginBottom: 16 },
   stepWrapper: { flexDirection: "row", gap: 12 },
   stepLeft: { alignItems: "center", width: 28 },
   stepNum: {
@@ -165,7 +165,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  stepNumText: { fontSize: 12, fontFamily: "Inter_700Bold" },
+  stepNumText: { fontSize: 12, fontFamily: "Inter_500Medium" },
   connector: { flex: 1, width: 1.5, marginVertical: 4, minHeight: 20 },
   stepContent: {
     flex: 1,
@@ -182,7 +182,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   stepInfo: { flex: 1, gap: 4 },
-  stepTitle: { fontSize: 15, fontFamily: "Inter_600SemiBold" },
+  stepTitle: { fontSize: 15, fontFamily: "Inter_500Medium" },
   stepDesc: { fontSize: 13, fontFamily: "Inter_400Regular", lineHeight: 18 },
   substepList: { gap: 4, marginTop: 4 },
   substepRow: { flexDirection: "row", alignItems: "center", gap: 8 },
@@ -196,7 +196,7 @@ const styles = StyleSheet.create({
     paddingVertical: 18,
     borderRadius: 18,
   },
-  goBtnText: { fontSize: 17, fontFamily: "Inter_600SemiBold" },
+  goBtnText: { fontSize: 17, fontFamily: "Inter_500Medium" },
   secRow: {
     flexDirection: "row",
     alignItems: "center",

@@ -127,14 +127,14 @@ const styles = StyleSheet.create({
     paddingVertical: 6,
     borderRadius: 10,
   },
-  badgeText: { fontSize: 13, fontFamily: "Inter_600SemiBold" },
+  badgeText: { fontSize: 13, fontFamily: "Inter_500Medium" },
   heroRow: {
     flexDirection: "row",
     alignItems: "flex-start",
     gap: 12,
   },
   heroText: { flex: 1, gap: 8 },
-  headline: { fontSize: 22, fontFamily: "Inter_700Bold", lineHeight: 30 },
+  headline: { fontSize: 22, fontFamily: "Inter_500Medium", lineHeight: 30 },
   heroSub: { fontSize: 14, fontFamily: "Inter_400Regular", lineHeight: 20 },
   illustration: {
     width: 90,
@@ -153,7 +153,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  sectionLabel: { fontSize: 14, fontFamily: "Inter_600SemiBold" },
+  sectionLabel: { fontSize: 14, fontFamily: "Inter_500Medium" },
   optionsCard: {
     borderRadius: 18,
     borderWidth: 1,
@@ -173,6 +173,6 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   optText: { flex: 1, gap: 3 },
-  optTitle: { fontSize: 14, fontFamily: "Inter_600SemiBold" },
+  optTitle: { fontSize: 14, fontFamily: "Inter_500Medium" },
   optDesc: { fontSize: 13, fontFamily: "Inter_400Regular", lineHeight: 18 },
 });
