@@ -52,7 +52,7 @@ export default function OnboardingScreen() {
           </View>
 
           <View style={styles.headlineArea}>
-            <Text style={[styles.headline, { color: colors.text, fontFamily: "Inter_500Medium" }]}>
+            <Text style={[styles.headline, { color: colors.text, fontFamily: "Inter_400Regular" }]}>
               Clarity in every step.{"\n"}Confidence in every assignment.
             </Text>
             <Text style={[styles.subtext, { color: colors.mutedForeground, fontFamily: "Inter_400Regular" }]}>
@@ -133,10 +133,10 @@ const styles = StyleSheet.create({
     marginBottom: 24,
   },
   headline: {
-    fontSize: 24,
+    fontSize: 20,
     textAlign: "center",
-    lineHeight: 32,
-    letterSpacing: -0.4,
+    lineHeight: 28,
+    letterSpacing: -0.2,
     marginBottom: 12,
   },
   subtext: {
