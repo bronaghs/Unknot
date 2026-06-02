@@ -1,8 +1,9 @@
 import { Ionicons } from "@expo/vector-icons";
 import * as Haptics from "expo-haptics";
 import { useRouter } from "expo-router";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import {
+  Animated,
   Image,
   Platform,
   ScrollView,
@@ -22,6 +23,25 @@ export default function OnboardingScreen() {
   const topPad = Platform.OS === "web" ? 0 : insets.top;
   const botPad = Platform.OS === "web" ? 0 : insets.bottom;
 
+  const logoAnim = useRef(new Animated.Value(0)).current;
+  const headlineAnim = useRef(new Animated.Value(0)).current;
+  const mountainAnim = useRef(new Animated.Value(0)).current;
+  const actionsAnim = useRef(new Animated.Value(0)).current;
+
+  useEffect(() => {
+    Animated.stagger(120, [
+      Animated.timing(logoAnim, { toValue: 1, duration: 500, useNativeDriver: false }),
+      Animated.timing(headlineAnim, { toValue: 1, duration: 500, useNativeDriver: false }),
+      Animated.timing(mountainAnim, { toValue: 1, duration: 500, useNativeDriver: false }),
+      Animated.timing(actionsAnim, { toValue: 1, duration: 500, useNativeDriver: false }),
+    ]).start();
+  }, []);
+
+  const makeStyle = (anim: Animated.Value) => ({
+    opacity: anim,
+    transform: [{ translateY: anim.interpolate({ inputRange: [0, 1], outputRange: [24, 0] }) }],
+  });
+
   const handleGetStarted = () => {
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
     router.push("/upload");
@@ -35,7 +55,7 @@ export default function OnboardingScreen() {
       >
         <View style={[styles.inner, { paddingTop: topPad + 32, paddingBottom: botPad + 24 }]}>
 
-          <View style={styles.logoArea}>
+          <Animated.View style={[styles.logoArea, makeStyle(logoAnim)]}>
             <Image
               source={require("../assets/images/icon.png")}
               style={styles.logoIcon}
@@ -49,18 +69,18 @@ export default function OnboardingScreen() {
             <Text style={[styles.logoTagline, { color: colors.mutedForeground, fontFamily: "Inter_600SemiBold" }]}>
               LET'S UNKNOT THIS
             </Text>
-          </View>
+          </Animated.View>
 
-          <View style={styles.headlineArea}>
+          <Animated.View style={[styles.headlineArea, makeStyle(headlineAnim)]}>
             <Text style={[styles.headline, { color: colors.text, fontFamily: "Inter_400Regular" }]}>
               Clarity in every step.{"\n"}Confidence in every assignment.
             </Text>
             <Text style={[styles.subtext, { color: colors.mutedForeground, fontFamily: "Inter_400Regular" }]}>
               A calm academic coach that helps{"\n"}you start, organize, and move forward.
             </Text>
-          </View>
+          </Animated.View>
 
-          <View style={[styles.mountainContainer, { backgroundColor: colors.card }]}>
+          <Animated.View style={[styles.mountainContainer, { backgroundColor: colors.card }, makeStyle(mountainAnim)]}>
             <Image
               source={require("../assets/images/mountain.png")}
               style={styles.mountain}
@@ -72,9 +92,9 @@ export default function OnboardingScreen() {
             <View style={styles.sparkleRight}>
               <Ionicons name="star" size={12} color={colors.accent} style={{ opacity: 0.7 }} />
             </View>
-          </View>
+          </Animated.View>
 
-          <View style={styles.actions}>
+          <Animated.View style={[styles.actions, makeStyle(actionsAnim)]}>
             <TouchableOpacity
               style={[styles.ctaBtn, { backgroundColor: colors.card, borderColor: colors.border }]}
               onPress={handleGetStarted}
@@ -95,7 +115,8 @@ export default function OnboardingScreen() {
                 I already have an account
               </Text>
             </TouchableOpacity>
-          </View>
+          </Animated.View>
+
         </View>
       </ScrollView>
     </View>
