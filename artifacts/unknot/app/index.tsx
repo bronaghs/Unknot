@@ -56,7 +56,7 @@ export default function OnboardingScreen() {
               Clarity in every step.{"\n"}Confidence in every assignment.
             </Text>
             <Text style={[styles.subtext, { color: colors.mutedForeground, fontFamily: "Inter_400Regular" }]}>
-              A calm academic coach that helps you{"\n"}start, organize, and move forward.
+              A calm academic coach that helps{"\n"}you start, organize, and move forward.
             </Text>
           </View>
 
